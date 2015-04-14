@@ -12,7 +12,7 @@ public class DiamondMain {
         showDiamondOptions();
 
         Scanner input = new Scanner(System.in);
-        System.out.printf("Choose a number, please (1): ");
+        System.out.printf("Choose a number, please (1-3): ");
         int typeToPrint = input.nextInt();
 
         System.out.printf("Enter with a number: ");
@@ -27,7 +27,8 @@ public class DiamondMain {
         String options = "Welcome! \n\n" +
                 "First, what you would like to print out? \n\n" +
                 "1 - Isosceles Triangle \n" +
-                "2 - Diamond \n";
+                "2 - Diamond \n" +
+                "3 - Diamond With Name \n";
 
         System.out.printf(options);
     }
@@ -47,9 +48,14 @@ public class DiamondMain {
                 result = diamond.drawIsoscelesTriangle(numberGiven);
             }else if(typeToPrint == 2){
                 result = diamond.drawDiamond(numberGiven);
+            }else if(typeToPrint == 3){
+                result = diamond.drawDiamondWithName(numberGiven);
+            }else{
+                throw new Exception("The type number is invalid.");
             }
 
             System.out.println(result);
+
         }catch (Exception ex){
             System.out.println("Something went wrong: "+ ex.getMessage());
         }

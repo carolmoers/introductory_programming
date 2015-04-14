@@ -17,6 +17,17 @@ public class Diamond {
         return diamond;
     }
 
+
+    public String drawDiamondWithName(int numberOfLines) {
+        String isosceles = createIsosceles(numberOfLines);
+
+        String isoscelesWithoutLastLine = createIsoscelesWithoutLastLine(isosceles, numberOfLines);
+
+        String diamond = isoscelesWithoutLastLine + "Caroline" + createIsoscelesReverse(isosceles, numberOfLines);
+
+        return diamond;
+    }
+
     private String createSpaces(int quantityOfSpaces){
         String spaces = "";
 
@@ -37,8 +48,10 @@ public class Diamond {
 
             isosceles += quantitySpaces + numberOfAsteriks.toString() + quantitySpaces;
 
-            numberOfAsteriks.insert(0,"**");
+
             if(counter<numberOfLines){
+                numberOfAsteriks.insert(0,"**");
+
                 isosceles += "\n";
             }
 
@@ -48,9 +61,19 @@ public class Diamond {
     }
 
     private String createIsoscelesReverse(String isosceles, int numberOfLines){
-        StringBuffer isoscelesReverse = new StringBuffer(isosceles);
+        StringBuffer isoscelesReverse = new StringBuffer(createIsoscelesWithoutLastLine(isosceles, numberOfLines));
 
+         return isoscelesReverse.reverse().toString();
+    }
 
-        return isoscelesReverse.reverse().delete(0,(numberOfLines+2)).toString();
+    private String createIsoscelesWithoutLastLine(String isosceles, int numberOfLines){
+        String[] LinesOfIsosceles = isosceles.split("\n");
+        String isoscelesWithoutLastLine = "";
+
+        for(int counter=0; counter<(numberOfLines-1); counter++){
+            isoscelesWithoutLastLine += LinesOfIsosceles[counter] + "\n";
+        }
+
+        return isoscelesWithoutLastLine;
     }
 }

@@ -25,4 +25,13 @@ public class DiamondTest {
 
         assertEquals("  *  \n *** \n*****\n *** \n  *  ", result);
     }
+
+    @Test
+    public void drawDiamondWithNameTest(){
+        Diamond diamond = new Diamond();
+        int numberOfLines = 3;
+        String result = diamond.drawDiamondWithName(numberOfLines);
+
+        assertEquals("  *  \n *** \nCaroline\n *** \n  *  ", result);
+    }
 }
