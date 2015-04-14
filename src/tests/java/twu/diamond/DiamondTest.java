@@ -1,7 +1,6 @@
 package twu.diamond;
 
 import org.junit.Test;
-
 import static junit.framework.TestCase.assertEquals;
 
 /**
@@ -16,5 +15,14 @@ public class DiamondTest {
         String result = diamond.drawIsoscelesTriangle(numberOfLines);
 
         assertEquals("  *  \n *** \n*****", result);
+    }
+
+    @Test
+    public void drawDiamondTest(){
+        Diamond diamond = new Diamond();
+        int numberOfLines = 3;
+        String result = diamond.drawDiamond(numberOfLines);
+
+        assertEquals("  *  \n *** \n*****\n *** \n  *  ", result);
     }
 }
