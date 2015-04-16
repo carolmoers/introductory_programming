@@ -5,25 +5,23 @@ package twu.fizz_buzz;
  */
 public class FizzBuzz {
 
-    public String FizzBuzz(int quantityOfNumbers) {
+    public String fizzBuzz(int quantityOfNumbers) {
         String result = "";
+        for(int counter=1;counter<=quantityOfNumbers;counter++) {
+            if ((counter % 3 == 0) && (counter % 5 == 0)) {
+                result += "FizzBuzz";
+            } else if (counter % 3 == 0) {
+                result += "Fizz";
+            } else if (counter % 5 == 0) {
+                result += "Buzz";
+            } else {
+                result += counter;
+            }
 
-    for(int counter=1;counter<=quantityOfNumbers;counter++) {
-        if ((counter % 3 == 0) && (counter % 5 == 0)) {
-            result += "FizzBuzz";
-        } else if (counter % 3 == 0) {
-            result += "Fizz";
-        } else if (counter % 5 == 0) {
-            result += "Buzz";
-        } else {
-            result += counter;
+            if (counter < quantityOfNumbers) {
+                result += "\n";
+            }
         }
-
-        if (counter < quantityOfNumbers) {
-            result += "\n";
-        }
-    }
-
         return result;
     }
 }

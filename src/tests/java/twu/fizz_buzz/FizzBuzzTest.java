@@ -1,7 +1,6 @@
 package twu.fizz_buzz;
 
 import org.junit.Test;
-
 import static junit.framework.TestCase.assertEquals;
 
 /**
@@ -11,7 +10,8 @@ public class FizzBuzzTest {
     @Test
     public void FizzBuzzTest(){
         FizzBuzz fizzBuzz = new FizzBuzz();
-        String result = fizzBuzz.FizzBuzz(15);
+        int quantityOfNumbers = 15;
+        String result = fizzBuzz.fizzBuzz(quantityOfNumbers);
 
         assertEquals("1\n" +
                 "2\n" +

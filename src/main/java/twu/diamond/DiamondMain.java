@@ -8,17 +8,12 @@ import java.util.Scanner;
 public class DiamondMain {
     public static void main(String[] args) {
         int numberGive = 0;
-
         showDiamondOptions();
-
         Scanner input = new Scanner(System.in);
         System.out.printf("Choose a number, please (1-3): ");
         int typeToPrint = input.nextInt();
-
         System.out.printf("Enter with a number: ");
         numberGive = input.nextInt();
-
-
         drawDiamond(typeToPrint, numberGive);
     }
 
@@ -39,7 +34,6 @@ public class DiamondMain {
         String result = "";
 
         try{
-
             if(numberGiven < 0){
                 throw new Exception("Invalid number of asterisks.");
             }

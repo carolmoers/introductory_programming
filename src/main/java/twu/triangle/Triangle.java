@@ -10,28 +10,24 @@ public class Triangle {
     }
 
     public String drawHorizontalLine(int numberOfAsterisks) {
-
         String horizontalLine = "";
-
         for (int counter = 0; counter < numberOfAsterisks; counter++) {
             horizontalLine += "*";
         }
-
         return horizontalLine;
     }
 
     public String drawVerticalLine(int numberOfAsterisks) {
-        String verticallLine = "";
-
+        String verticalLine = "";
         for(int counter=0; counter<numberOfAsterisks; counter++){
-            verticallLine += "*";
+            verticalLine += "*";
 
             if(counter<(numberOfAsterisks-1)){
-                verticallLine += "\n";
+                verticalLine += "\n";
             }
         }
 
-        return verticallLine;
+        return verticalLine;
     }
 
     public String drawRightTriangule(int numberOfAsterisksLastLine) {
@@ -46,8 +42,6 @@ public class Triangle {
                 rightTriangule += "\n";
             }
         }
-
-
         return rightTriangule;
     }
 }

@@ -6,18 +6,15 @@ public class TriangleMain {
 
     public static void main(String[] args) {
         int numberGive = 0;
-
         showTriangleOptions();
-
         Scanner input = new Scanner(System.in);
         System.out.printf("Choose a number, please (1-4): ");
-        int typeToPrint = input.nextInt();
 
+        int typeToPrint = input.nextInt();
         if(typeToPrint > 1) {
             System.out.printf("Enter with a number: ");
             numberGive = input.nextInt();
         }
-
         drawTriangle(typeToPrint, numberGive);
     }
 
@@ -56,11 +53,9 @@ public class TriangleMain {
                     throw new Exception("The type number is invalid.");
                 }
             }
-
             System.out.println(result);
         }catch (Exception ex){
             System.out.println("Something went wrong: "+ ex.getMessage());
         }
-
     }
 }
