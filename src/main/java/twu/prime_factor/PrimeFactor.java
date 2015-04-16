@@ -30,7 +30,7 @@ public class PrimeFactor {
             for(int numberToDivided=1; numberToDivided<=totalNumber; numberToDivided++ ){
                if(numberToPrint%numberToDivided == 0){
                    numberOfDivisions++;
-                }
+               }
             }
             if(numberOfDivisions==2){
                 primeFactors.add(numberToPrint);
